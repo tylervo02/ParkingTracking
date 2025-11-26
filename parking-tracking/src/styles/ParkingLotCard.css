@@ -1,1 +1,54 @@
- 
+.parking-lot-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.space-info {
+  margin: 1rem 0;
+}
+
+.reserve-btn {
+  background-color: #1a5276;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.reserve-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.spaces-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+  gap: 5px;
+  margin-top: 1rem;
+}
+
+.space {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.space.available {
+  background-color: #27ae60;
+  color: white;
+}
+
+.space.occupied {
+  background-color: #e74c3c;
+  color: white;
+} 
