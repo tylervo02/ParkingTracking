@@ -1,0 +1,1211 @@
+.homePage {
+  	width: 100%;
+  	height: 1024px;
+  	position: relative;
+  	background-color: var(--color-white);
+  	overflow: hidden;
+  	text-align: left;
+  	font-size: var(--fs-24);
+  	color: var(--color-black);
+  	font-family: var(--font-istok-web);
+}
+.image1Icon {
+  	position: absolute;
+  	top: 184px;
+  	left: 115px;
+  	width: 605px;
+  	height: 598px;
+  	object-fit: cover;
+}
+.frameIcon {
+  	position: absolute;
+  	top: 512px;
+  	left: 361px;
+  	width: 57px;
+  	height: 57px;
+}
+.vectorIcon {
+  	position: absolute;
+  	height: 5.04%;
+  	width: 2.97%;
+  	top: 23.44%;
+  	right: 62.86%;
+  	bottom: 71.52%;
+  	left: 34.17%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+}
+.vectorIcon2 {
+  	position: absolute;
+  	height: 5.04%;
+  	width: 2.97%;
+  	top: 25.1%;
+  	right: 70.99%;
+  	bottom: 69.86%;
+  	left: 26.04%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+}
+.vectorIcon3 {
+  	position: absolute;
+  	height: 5.04%;
+  	width: 2.97%;
+  	top: 27.64%;
+  	right: 66.54%;
+  	bottom: 67.32%;
+  	left: 30.49%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+}
+.vectorIcon4 {
+  	position: absolute;
+  	height: 5.04%;
+  	width: 2.97%;
+  	top: 43.75%;
+  	right: 86.4%;
+  	bottom: 51.21%;
+  	left: 10.63%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+}
+.vectorIcon5 {
+  	position: absolute;
+  	height: 5.04%;
+  	width: 2.97%;
+  	top: 47.75%;
+  	right: 80.43%;
+  	bottom: 47.21%;
+  	left: 16.6%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+}
+.homePageChild {
+  	position: absolute;
+  	top: 429px;
+  	left: 763px;
+  	background-color: var(--color-gainsboro);
+  	width: 612px;
+  	height: 90px;
+  	cursor: pointer;
+}
+.homePageItem {
+  	position: absolute;
+  	top: 675px;
+  	left: 763px;
+  	background-color: var(--color-gainsboro);
+  	width: 612px;
+  	height: 90px;
+  	cursor: pointer;
+}
+.lotF {
+  	position: absolute;
+  	top: 439px;
+  	left: 834px;
+}
+.lotE {
+  	position: absolute;
+  	top: 685px;
+  	left: 833px;
+}
+.rectangle {
+  	position: absolute;
+  	top: 193px;
+  	left: 763px;
+  	background-color: var(--color-gainsboro);
+  	width: 612px;
+  	height: 90px;
+  	cursor: pointer;
+}
+.lotC {
+  	position: absolute;
+  	top: 203px;
+  	left: 833px;
+}
+.spotAvailable {
+  	position: absolute;
+  	top: 203px;
+  	left: 1129px;
+}
+.spotAvailable2 {
+  	position: absolute;
+  	top: 439px;
+  	left: 1130px;
+}
+.spotAvailable3 {
+  	position: absolute;
+  	top: 685px;
+  	left: 1120px;
+}
+.csusmLogoHere {
+  	position: absolute;
+  	top: 69px;
+  	left: 115px;
+  	font-size: 40px;
+  	display: inline-block;
+  	width: 508px;
+  	height: 84px;
+}
+.barlinechart {
+  	position: absolute;
+  	top: 517px;
+  	left: 763px;
+  	background-color: var(--color-white);
+  	width: 612px;
+  	height: 159px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 32px var(--padding-16) var(--padding-16);
+  	box-sizing: border-box;
+  	font-size: var(--fs-12);
+  	color: var(--color-gray-300);
+  	font-family: var(--font-inter);
+}
+.chartaxis {
+  	align-self: stretch;
+  	flex: 1;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+}
+.mainchart {
+  	align-self: stretch;
+  	flex: 1;
+  	display: flex;
+  	align-items: center;
+}
+.yaxisleft {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-end;
+  	justify-content: space-between;
+  	padding: var(--padding-0) var(--padding-4);
+  	gap: var(--gap-0);
+}
+.div {
+  	position: relative;
+}
+.graphigrid {
+  	align-self: stretch;
+  	flex: 1;
+  	position: relative;
+}
+.xlines {
+  	position: absolute;
+  	height: 100%;
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: 0px;
+  	left: 0px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	justify-content: space-between;
+  	padding: var(--padding-6) var(--padding-1);
+  	box-sizing: border-box;
+  	gap: var(--gap-0);
+}
+.line {
+  	align-self: stretch;
+  	height: var(--height-1);
+  	position: relative;
+  	border-top: var(--border-11);
+  	box-sizing: border-box;
+}
+.line3 {
+  	align-self: stretch;
+  	height: var(--height-1);
+  	position: relative;
+  	border-top: 1px solid var(--color-gray-100);
+  	box-sizing: border-box;
+}
+.ylines {
+  	position: absolute;
+  	height: 100%;
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: 0px;
+  	left: 0px;
+  	display: flex;
+  	align-items: flex-start;
+  	justify-content: space-between;
+  	padding: var(--padding-6) var(--padding-1);
+  	box-sizing: border-box;
+  	gap: var(--gap-20);
+}
+.line4 {
+  	align-self: stretch;
+  	width: var(--width-1);
+  	position: relative;
+  	border-right: var(--border-12);
+  	box-sizing: border-box;
+}
+.bararea {
+  	position: absolute;
+  	height: calc(100% - 12px);
+  	width: 100%;
+  	top: 6px;
+  	right: 0px;
+  	bottom: 6px;
+  	left: 0px;
+  	border-bottom: 1px solid var(--color-gray-100);
+  	box-sizing: border-box;
+  	display: flex;
+  	align-items: flex-start;
+}
+.bargroup {
+  	align-self: stretch;
+  	flex: 1;
+  	display: flex;
+  	align-items: flex-start;
+  	padding: var(--padding-0) 110px;
+  	gap: var(--gap-2);
+}
+.barbg {
+  	position: absolute;
+  	height: 100%;
+  	width: var(--width-calc1000_2);
+  	top: 0px;
+  	right: -0.2px;
+  	bottom: 0px;
+  	left: 0px;
+  	background-color: var(--color-lavender);
+  	overflow: hidden;
+  	opacity: var(--opacity-0_8);
+}
+.singlebar {
+  	position: absolute;
+  	height: 62.04%;
+  	width: var(--width-calc1000_2);
+  	top: 38%;
+  	right: -0.2px;
+  	bottom: -0.04%;
+  	left: 0px;
+}
+.barstrip {
+  	position: absolute;
+  	height: calc(100% - 0.5px);
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: 0.5px;
+  	left: 0px;
+  	background-color: var(--color-mediumslateblue);
+  	opacity: var(--opacity-0_8);
+}
+.singlebar2 {
+  	position: absolute;
+  	height: 82.04%;
+  	width: var(--width-calc1000_2);
+  	top: 18%;
+  	right: -0.2px;
+  	bottom: -0.04%;
+  	left: 0px;
+}
+.barstrip2 {
+  	position: absolute;
+  	height: calc(100% + 0.1px);
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: -0.1px;
+  	left: 0px;
+  	background-color: var(--color-lightcoral);
+  	opacity: var(--opacity-0_8);
+}
+.singlebar3 {
+  	position: absolute;
+  	height: 65.93%;
+  	width: var(--width-calc1000_2);
+  	top: 34%;
+  	right: -0.2px;
+  	bottom: 0.07%;
+  	left: 0px;
+}
+.barstrip3 {
+  	position: absolute;
+  	height: calc(100% + 0.1px);
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: -0.1px;
+  	left: 0px;
+  	background-color: var(--color-skyblue-100);
+  	opacity: var(--opacity-0_8);
+}
+.singlebar4 {
+  	position: absolute;
+  	height: 32.96%;
+  	width: var(--width-calc1000_2);
+  	top: 67%;
+  	right: -0.2px;
+  	bottom: 0.04%;
+  	left: 0px;
+}
+.barstrip4 {
+  	position: absolute;
+  	height: calc(100% + 0.6px);
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: -0.6px;
+  	left: 0px;
+  	background-color: var(--color-sandybrown);
+  	opacity: var(--opacity-0_8);
+}
+.singlebar5 {
+  	position: absolute;
+  	height: 79.07%;
+  	width: var(--width-calc1000_2);
+  	top: 21%;
+  	right: -0.2px;
+  	bottom: -0.07%;
+  	left: 0px;
+}
+.barstrip5 {
+  	position: absolute;
+  	height: 100%;
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: 0px;
+  	left: 0px;
+  	background-color: var(--color-royalblue);
+  	opacity: var(--opacity-0_8);
+}
+.singlebar6 {
+  	position: absolute;
+  	height: 19.07%;
+  	width: var(--width-calc1000_2);
+  	top: 81%;
+  	right: -0.2px;
+  	bottom: -0.07%;
+  	left: 0px;
+}
+.barstrip6 {
+  	position: absolute;
+  	height: calc(100% + 0.2px);
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: -0.2px;
+  	left: 0px;
+  	background-color: var(--color-mediumseagreen);
+  	opacity: var(--opacity-0_8);
+}
+.singlebar7 {
+  	position: absolute;
+  	height: 47.96%;
+  	width: var(--width-calc1000_2);
+  	top: 52%;
+  	right: -0.2px;
+  	bottom: 0.04%;
+  	left: 0px;
+}
+.barstrip7 {
+  	position: absolute;
+  	height: calc(100% + 0.3px);
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: -0.3px;
+  	left: 0px;
+  	background-color: var(--color-mediumpurple);
+  	opacity: var(--opacity-0_8);
+}
+.singlebar8 {
+  	position: absolute;
+  	height: 80.93%;
+  	width: var(--width-calc1000_2);
+  	top: 19%;
+  	right: -0.2px;
+  	bottom: 0.07%;
+  	left: 0px;
+}
+.barstrip8 {
+  	position: absolute;
+  	height: calc(100% - 0.2px);
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: 0.2px;
+  	left: 0px;
+  	background-color: var(--color-skyblue-200);
+  	opacity: var(--opacity-0_8);
+}
+.singlebar9 {
+  	position: absolute;
+  	height: 75.93%;
+  	width: var(--width-calc1000_2);
+  	top: 24%;
+  	right: -0.2px;
+  	bottom: 0.07%;
+  	left: 0px;
+}
+.barstrip9 {
+  	position: absolute;
+  	height: var(--height-calc100-0_1);
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: 0.1px;
+  	left: 0px;
+  	background-color: var(--color-dodgerblue);
+  	opacity: var(--opacity-0_8);
+}
+.singlebar10 {
+  	position: absolute;
+  	height: 59.07%;
+  	width: var(--width-calc1000_2);
+  	top: 41%;
+  	right: -0.2px;
+  	bottom: -0.07%;
+  	left: 0px;
+}
+.barstrip10 {
+  	position: absolute;
+  	height: calc(100% + 0.4px);
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: -0.4px;
+  	left: 0px;
+  	background-color: var(--color-gold);
+  	opacity: var(--opacity-0_8);
+}
+.singlebar11 {
+  	position: absolute;
+  	height: 92.96%;
+  	width: var(--width-calc1000_2);
+  	top: 7%;
+  	right: -0.2px;
+  	bottom: 0.04%;
+  	left: 0px;
+}
+.barstrip11 {
+  	position: absolute;
+  	height: calc(100% - 0.6px);
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: 0.6px;
+  	left: 0px;
+  	background-color: var(--color-mediumaquamarine);
+  	opacity: var(--opacity-0_8);
+}
+.barstrip12 {
+  	position: absolute;
+  	height: calc(100% + 0.3px);
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: -0.3px;
+  	left: 0px;
+  	background-color: var(--color-cornflowerblue);
+  	opacity: var(--opacity-0_8);
+}
+.configanddataBarDontRemove {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: var(--width-8);
+  	height: var(--height-8);
+  	display: none;
+}
+.xaxis {
+  	align-self: stretch;
+  	display: flex;
+  	align-items: flex-start;
+  	padding: var(--padding-0) var(--padding-0) var(--padding-8) 29px;
+  	margin-top: -2px;
+  	position: relative;
+  	text-align: center;
+}
+.xlabelbox {
+  	flex: 1;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-end;
+}
+.departures {
+  	align-self: stretch;
+  	position: relative;
+}
+.legends {
+  	align-self: stretch;
+  	overflow: hidden;
+  	display: flex;
+  	align-items: flex-start;
+  	justify-content: center;
+  	flex-wrap: wrap;
+  	align-content: flex-start;
+}
+.filllegends {
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	flex-wrap: wrap;
+  	align-content: center;
+  	padding: var(--padding-0) var(--padding-8);
+  	gap: var(--gap-0) var(--gap-8);
+  	flex-shrink: 0;
+}
+.legend {
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	padding: var(--padding-4);
+  	gap: var(--gap-4);
+}
+.legendnode {
+  	height: var(--height-12);
+  	width: var(--width-12);
+  	position: relative;
+}
+.basicnode {
+  	position: absolute;
+  	top: 6px;
+  	left: 6px;
+  	width: var(--width-1);
+  	height: var(--height-1);
+}
+.squarefill {
+  	position: absolute;
+  	top: -6px;
+  	left: -6px;
+  	background-color: var(--color-mediumslateblue);
+  	border: var(--border-1);
+  	box-sizing: border-box;
+  	width: var(--width-12);
+  	height: var(--height-12);
+  	flex-shrink: 0;
+}
+.squarefill2 {
+  	position: absolute;
+  	top: -6px;
+  	left: -6px;
+  	background-color: var(--color-lightcoral);
+  	border: var(--border-1);
+  	box-sizing: border-box;
+  	width: var(--width-12);
+  	height: var(--height-12);
+  	flex-shrink: 0;
+}
+.squarefill3 {
+  	position: absolute;
+  	top: -6px;
+  	left: -6px;
+  	background-color: var(--color-skyblue-100);
+  	border: var(--border-1);
+  	box-sizing: border-box;
+  	width: var(--width-12);
+  	height: var(--height-12);
+  	flex-shrink: 0;
+}
+.squarefill4 {
+  	position: absolute;
+  	top: -6px;
+  	left: -6px;
+  	background-color: var(--color-sandybrown);
+  	border: var(--border-1);
+  	box-sizing: border-box;
+  	width: var(--width-12);
+  	height: var(--height-12);
+  	flex-shrink: 0;
+}
+.squarefill5 {
+  	position: absolute;
+  	top: -6px;
+  	left: -6px;
+  	background-color: var(--color-royalblue);
+  	border: var(--border-1);
+  	box-sizing: border-box;
+  	width: var(--width-12);
+  	height: var(--height-12);
+  	flex-shrink: 0;
+}
+.squarefill6 {
+  	position: absolute;
+  	top: -6px;
+  	left: -6px;
+  	background-color: var(--color-mediumseagreen);
+  	border: var(--border-1);
+  	box-sizing: border-box;
+  	width: var(--width-12);
+  	height: var(--height-12);
+  	flex-shrink: 0;
+}
+.squarefill7 {
+  	position: absolute;
+  	top: -6px;
+  	left: -6px;
+  	background-color: var(--color-mediumpurple);
+  	border: var(--border-1);
+  	box-sizing: border-box;
+  	width: var(--width-12);
+  	height: var(--height-12);
+  	flex-shrink: 0;
+}
+.squarefill8 {
+  	position: absolute;
+  	top: -6px;
+  	left: -6px;
+  	background-color: var(--color-skyblue-200);
+  	border: var(--border-1);
+  	box-sizing: border-box;
+  	width: var(--width-12);
+  	height: var(--height-12);
+  	flex-shrink: 0;
+}
+.squarefill9 {
+  	position: absolute;
+  	top: -6px;
+  	left: -6px;
+  	background-color: var(--color-dodgerblue);
+  	border: var(--border-1);
+  	box-sizing: border-box;
+  	width: var(--width-12);
+  	height: var(--height-12);
+  	flex-shrink: 0;
+}
+.squarefill10 {
+  	position: absolute;
+  	top: -6px;
+  	left: -6px;
+  	background-color: var(--color-gold);
+  	border: var(--border-1);
+  	box-sizing: border-box;
+  	width: var(--width-12);
+  	height: var(--height-12);
+  	flex-shrink: 0;
+}
+.squarefill11 {
+  	position: absolute;
+  	top: -6px;
+  	left: -6px;
+  	background-color: var(--color-mediumaquamarine);
+  	border: var(--border-1);
+  	box-sizing: border-box;
+  	width: var(--width-12);
+  	height: var(--height-12);
+  	flex-shrink: 0;
+}
+.squarefill12 {
+  	position: absolute;
+  	top: -6px;
+  	left: -6px;
+  	background-color: var(--color-cornflowerblue);
+  	border: var(--border-1);
+  	box-sizing: border-box;
+  	width: var(--width-12);
+  	height: var(--height-12);
+  	flex-shrink: 0;
+}
+.barlinechart2 {
+  	position: absolute;
+  	top: 774px;
+  	left: 768px;
+  	background-color: var(--color-white);
+  	width: 563px;
+  	height: 251px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: var(--padding-0) var(--padding-16) var(--padding-16);
+  	box-sizing: border-box;
+  	font-size: var(--fs-12);
+  	color: var(--color-gray-300);
+  	font-family: var(--font-inter);
+}
+.bargroup2 {
+  	align-self: stretch;
+  	flex: 1;
+  	display: flex;
+  	align-items: flex-start;
+  	padding: var(--padding-0) 108px;
+  	gap: var(--gap-2);
+}
+.barbg13 {
+  	position: absolute;
+  	height: 100%;
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: 0px;
+  	left: 0px;
+  	background-color: var(--color-lavender);
+  	overflow: hidden;
+  	opacity: var(--opacity-0_8);
+}
+.singlebar13 {
+  	position: absolute;
+  	height: 37.98%;
+  	width: 100%;
+  	top: 62%;
+  	right: 0px;
+  	bottom: 0.02%;
+  	left: 0px;
+}
+.barstrip13 {
+  	position: absolute;
+  	height: calc(100% + 0.5px);
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: -0.5px;
+  	left: 0px;
+  	background-color: var(--color-mediumslateblue);
+  	opacity: var(--opacity-0_8);
+}
+.singlebar14 {
+  	position: absolute;
+  	height: 16.01%;
+  	width: 100%;
+  	top: 84%;
+  	right: 0px;
+  	bottom: -0.01%;
+  	left: 0px;
+}
+.barstrip14 {
+  	position: absolute;
+  	height: calc(100% - 0.3px);
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: 0.3px;
+  	left: 0px;
+  	background-color: var(--color-lightcoral);
+  	opacity: var(--opacity-0_8);
+}
+.singlebar15 {
+  	position: absolute;
+  	height: 8.99%;
+  	width: 100%;
+  	top: 91%;
+  	right: 0px;
+  	bottom: 0.01%;
+  	left: 0px;
+}
+.barstrip15 {
+  	position: absolute;
+  	height: calc(100% - 0.5px);
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: 0.5px;
+  	left: 0px;
+  	background-color: var(--color-skyblue-100);
+  	opacity: var(--opacity-0_8);
+}
+.singlebar16 {
+  	position: absolute;
+  	height: 23.99%;
+  	width: 100%;
+  	top: 76%;
+  	right: 0px;
+  	bottom: 0.01%;
+  	left: 0px;
+}
+.barstrip16 {
+  	position: absolute;
+  	height: calc(100% + 0.1px);
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: -0.1px;
+  	left: 0px;
+  	background-color: var(--color-sandybrown);
+  	opacity: var(--opacity-0_8);
+}
+.singlebar17 {
+  	position: absolute;
+  	height: 57.98%;
+  	width: 100%;
+  	top: 42%;
+  	right: 0px;
+  	bottom: 0.02%;
+  	left: 0px;
+}
+.barstrip17 {
+  	position: absolute;
+  	height: var(--height-calc100-0_1);
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: 0.1px;
+  	left: 0px;
+  	background-color: var(--color-royalblue);
+  	opacity: var(--opacity-0_8);
+}
+.singlebar18 {
+  	position: absolute;
+  	height: 52.98%;
+  	width: 100%;
+  	top: 47%;
+  	right: 0px;
+  	bottom: 0.02%;
+  	left: 0px;
+}
+.barstrip18 {
+  	position: absolute;
+  	height: calc(100% + 0.1px);
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: -0.1px;
+  	left: 0px;
+  	background-color: var(--color-mediumseagreen);
+  	opacity: var(--opacity-0_8);
+}
+.singlebar19 {
+  	position: absolute;
+  	height: 7.02%;
+  	width: 100%;
+  	top: 93%;
+  	right: 0px;
+  	bottom: -0.02%;
+  	left: 0px;
+}
+.barstrip19 {
+  	position: absolute;
+  	height: calc(100% - 0.9px);
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: 0.9px;
+  	left: 0px;
+  	background-color: var(--color-mediumpurple);
+  	opacity: var(--opacity-0_8);
+}
+.singlebar20 {
+  	position: absolute;
+  	height: 91.01%;
+  	width: 100%;
+  	top: 9%;
+  	right: 0px;
+  	bottom: -0.01%;
+  	left: 0px;
+}
+.barstrip20 {
+  	position: absolute;
+  	height: calc(100% + 0.5px);
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: -0.5px;
+  	left: 0px;
+  	background-color: var(--color-skyblue-200);
+  	opacity: var(--opacity-0_8);
+}
+.singlebar21 {
+  	position: absolute;
+  	height: 5%;
+  	width: 100%;
+  	top: 95%;
+  	right: 0px;
+  	bottom: 0%;
+  	left: 0px;
+}
+.singlebar22 {
+  	position: absolute;
+  	height: 97.02%;
+  	width: 100%;
+  	top: 3%;
+  	right: 0px;
+  	bottom: -0.02%;
+  	left: 0px;
+}
+.singlebar23 {
+  	position: absolute;
+  	height: 82.02%;
+  	width: 100%;
+  	top: 18%;
+  	right: 0px;
+  	bottom: -0.02%;
+  	left: 0px;
+}
+.barstrip23 {
+  	position: absolute;
+  	height: var(--height-calc100-0_1);
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: 0.1px;
+  	left: 0px;
+  	background-color: var(--color-mediumaquamarine);
+  	opacity: var(--opacity-0_8);
+}
+.singlebar24 {
+  	position: absolute;
+  	height: 27.98%;
+  	width: 100%;
+  	top: 72%;
+  	right: 0px;
+  	bottom: 0.02%;
+  	left: 0px;
+}
+.barstrip24 {
+  	position: absolute;
+  	height: calc(100% - 0.2px);
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: 0.2px;
+  	left: 0px;
+  	background-color: var(--color-cornflowerblue);
+  	opacity: var(--opacity-0_8);
+}
+.barlinechart3 {
+  	position: absolute;
+  	top: 279px;
+  	left: 820px;
+  	background-color: var(--color-white);
+  	width: 498px;
+  	height: 151px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: var(--padding-0) var(--padding-16) var(--padding-16);
+  	box-sizing: border-box;
+  	font-size: var(--fs-12);
+  	color: var(--color-gray-300);
+  	font-family: var(--font-inter);
+}
+.chartaxis3 {
+  	align-self: stretch;
+  	height: 127px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	flex-shrink: 0;
+}
+.barbg25 {
+  	position: absolute;
+  	height: 100%;
+  	width: var(--width-calc1000_4);
+  	top: 0px;
+  	right: -0.4px;
+  	bottom: 0px;
+  	left: 0px;
+  	background-color: var(--color-lavender);
+  	overflow: hidden;
+  	opacity: var(--opacity-0_8);
+}
+.singlebar25 {
+  	position: absolute;
+  	height: 96.02%;
+  	width: var(--width-calc1000_4);
+  	top: 4%;
+  	right: -0.4px;
+  	bottom: -0.02%;
+  	left: 0px;
+}
+.barstrip25 {
+  	position: absolute;
+  	height: var(--height-calc100-0_1);
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: 0.1px;
+  	left: 0px;
+  	background-color: var(--color-mediumslateblue);
+  	opacity: var(--opacity-0_8);
+}
+.singlebar26 {
+  	position: absolute;
+  	height: 12.04%;
+  	width: var(--width-calc1000_4);
+  	top: 88%;
+  	right: -0.4px;
+  	bottom: -0.04%;
+  	left: 0px;
+}
+.barstrip26 {
+  	position: absolute;
+  	height: calc(100% + 0.2px);
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: -0.2px;
+  	left: 0px;
+  	background-color: var(--color-lightcoral);
+  	opacity: var(--opacity-0_8);
+}
+.singlebar27 {
+  	position: absolute;
+  	height: 34.95%;
+  	width: var(--width-calc1000_4);
+  	top: 65%;
+  	right: -0.4px;
+  	bottom: 0.05%;
+  	left: 0px;
+}
+.barstrip27 {
+  	position: absolute;
+  	height: calc(100% + 0.8px);
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: -0.8px;
+  	left: 0px;
+  	background-color: var(--color-skyblue-100);
+  	opacity: var(--opacity-0_8);
+}
+.singlebar28 {
+  	position: absolute;
+  	height: 76.02%;
+  	width: var(--width-calc1000_4);
+  	top: 24%;
+  	right: -0.4px;
+  	bottom: -0.02%;
+  	left: 0px;
+}
+.barstrip28 {
+  	position: absolute;
+  	height: calc(100% + 0.5px);
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: -0.5px;
+  	left: 0px;
+  	background-color: var(--color-sandybrown);
+  	opacity: var(--opacity-0_8);
+}
+.singlebar29 {
+  	position: absolute;
+  	height: 52.04%;
+  	width: var(--width-calc1000_4);
+  	top: 48%;
+  	right: -0.4px;
+  	bottom: -0.04%;
+  	left: 0px;
+}
+.singlebar30 {
+  	position: absolute;
+  	height: 93.01%;
+  	width: var(--width-calc1000_4);
+  	top: 7%;
+  	right: -0.4px;
+  	bottom: -0.01%;
+  	left: 0px;
+}
+.barstrip30 {
+  	position: absolute;
+  	height: var(--height-calc100-0_1);
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: 0.1px;
+  	left: 0px;
+  	background-color: var(--color-mediumseagreen);
+  	opacity: var(--opacity-0_8);
+}
+.singlebar31 {
+  	position: absolute;
+  	height: 97.96%;
+  	width: var(--width-calc1000_4);
+  	top: 2%;
+  	right: -0.4px;
+  	bottom: 0.04%;
+  	left: 0px;
+}
+.barstrip31 {
+  	position: absolute;
+  	height: 100%;
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: 0px;
+  	left: 0px;
+  	background-color: var(--color-mediumpurple);
+  	opacity: var(--opacity-0_8);
+}
+.singlebar32 {
+  	position: absolute;
+  	height: 46.99%;
+  	width: var(--width-calc1000_4);
+  	top: 53%;
+  	right: -0.4px;
+  	bottom: 0.01%;
+  	left: 0px;
+}
+.barstrip32 {
+  	position: absolute;
+  	height: var(--height-calc100-0_1);
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: 0.1px;
+  	left: 0px;
+  	background-color: var(--color-skyblue-200);
+  	opacity: var(--opacity-0_8);
+}
+.singlebar33 {
+  	position: absolute;
+  	height: 72.04%;
+  	width: var(--width-calc1000_4);
+  	top: 28%;
+  	right: -0.4px;
+  	bottom: -0.04%;
+  	left: 0px;
+}
+.barstrip33 {
+  	position: absolute;
+  	height: calc(100% + 0.4px);
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: -0.4px;
+  	left: 0px;
+  	background-color: var(--color-dodgerblue);
+  	opacity: var(--opacity-0_8);
+}
+.singlebar34 {
+  	position: absolute;
+  	height: 70%;
+  	width: var(--width-calc1000_4);
+  	top: 30%;
+  	right: -0.4px;
+  	bottom: 0%;
+  	left: 0px;
+}
+.barstrip34 {
+  	position: absolute;
+  	height: calc(100% - 0.6px);
+  	width: 100%;
+  	top: 0px;
+  	right: 0px;
+  	bottom: 0.6px;
+  	left: 0px;
+  	background-color: var(--color-gold);
+  	opacity: var(--opacity-0_8);
+}
+.singlebar36 {
+  	position: absolute;
+  	height: 63.98%;
+  	width: var(--width-calc1000_4);
+  	top: 36%;
+  	right: -0.4px;
+  	bottom: 0.02%;
+  	left: 0px;
+}
+.legends3 {
+  	align-self: stretch;
+  	overflow: hidden;
+  	display: flex;
+  	align-items: flex-start;
+  	justify-content: center;
+  	flex-wrap: wrap;
+  	align-content: flex-start;
+  	flex-shrink: 0;
+}
+
