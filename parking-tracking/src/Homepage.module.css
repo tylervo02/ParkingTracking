@@ -9,81 +9,6 @@
   	color: var(--color-black);
   	font-family: var(--font-istok-web);
 }
-.image1Icon {
-  	position: absolute;
-  	top: 184px;
-  	left: 115px;
-  	width: 605px;
-  	height: 598px;
-  	object-fit: cover;
-}
-.frameIcon {
-  	position: absolute;
-  	top: 512px;
-  	left: 361px;
-  	width: 57px;
-  	height: 57px;
-}
-.vectorIcon {
-  	position: absolute;
-  	height: 5.04%;
-  	width: 2.97%;
-  	top: 23.44%;
-  	right: 62.86%;
-  	bottom: 71.52%;
-  	left: 34.17%;
-  	max-width: 100%;
-  	overflow: hidden;
-  	max-height: 100%;
-}
-.vectorIcon2 {
-  	position: absolute;
-  	height: 5.04%;
-  	width: 2.97%;
-  	top: 25.1%;
-  	right: 70.99%;
-  	bottom: 69.86%;
-  	left: 26.04%;
-  	max-width: 100%;
-  	overflow: hidden;
-  	max-height: 100%;
-}
-.vectorIcon3 {
-  	position: absolute;
-  	height: 5.04%;
-  	width: 2.97%;
-  	top: 27.64%;
-  	right: 66.54%;
-  	bottom: 67.32%;
-  	left: 30.49%;
-  	max-width: 100%;
-  	overflow: hidden;
-  	max-height: 100%;
-}
-.vectorIcon4 {
-  	position: absolute;
-  	height: 5.04%;
-  	width: 2.97%;
-  	top: 43.75%;
-  	right: 86.4%;
-  	bottom: 51.21%;
-  	left: 10.63%;
-  	max-width: 100%;
-  	overflow: hidden;
-  	max-height: 100%;
-}
-.vectorIcon5 {
-  	position: absolute;
-  	height: 5.04%;
-  	width: 2.97%;
-  	top: 47.75%;
-  	right: 80.43%;
-  	bottom: 47.21%;
-  	left: 16.6%;
-  	max-width: 100%;
-  	overflow: hidden;
-  	max-height: 100%;
-}
 .homePageChild {
   	position: absolute;
   	top: 429px;
@@ -1208,4 +1133,65 @@
   	align-content: flex-start;
   	flex-shrink: 0;
 }
+.csusmparkingmap1Icon {
+  	position: absolute;
+  	top: 193px;
+  	left: 28px;
+  	width: 715px;
+  	height: 551px;
+  	object-fit: cover;
+}
 
+.button {
+  	position: relative;
+  	border-radius: 8px;
+  	background-color: var(--color-gray);
+  	border: 1px solid var(--color-gray);
+  	box-sizing: border-box;
+  	width: 100%;
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 12px;
+  	cursor: pointer;
+  	text-align: left;
+  	font-size: 16px;
+  	color: var(--color-whitesmoke);
+  	font-family: var(--font-inter);
+}
+.button2 {
+  	position: relative;
+  	line-height: 100%;
+}
+
+.rotatedTableWrapper {
+  overflow-x: auto;           /* in case it gets too wide */
+  margin: 50px;               /* some space so it doesn't touch edges */
+}
+
+.rotatedTable {
+  transform: rotate(90deg);
+  transform-origin: center center;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* Optional: make it look better after rotation */
+.rotatedTable th,
+.rotatedTable td {
+  padding: 8px 12px;
+}
+
+.rotatedDL {
+	display: grid;
+	grid-template-columns: max-content auto;
+}
+
+.rotatedDL dt {
+	grid-column-start: 1;
+}
+
+.rotatedDL dd {
+	grid-column-start: 2;
+}

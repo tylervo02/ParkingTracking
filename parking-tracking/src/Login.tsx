@@ -1,8 +1,11 @@
+import { useNavigate } from 'react-router-dom';
 import styles from './Login.module.css';
 
 const Login = () => {
+  const navigate = useNavigate();
   const loginUser = () => {
     // your login logic here later
+    navigate("/homepage");
     console.log("Signing in...");
   };
 
@@ -13,9 +16,9 @@ const Login = () => {
     </div>
 
     <div>
-        <label>Username: <input type="text" name='username' defaultValue="username"/></label>
+        <label>Username: <input type="text" name='username'/></label>
         <br />
-        <label>Password: <input type="text" name="password" defaultValue="password"/></label>
+        <label>Password: <input type="text" name="password"/></label>
     </div>
 
     <div className={styles.headerAuth}>
