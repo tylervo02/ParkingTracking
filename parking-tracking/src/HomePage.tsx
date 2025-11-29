@@ -39,7 +39,7 @@ const HomePage = () => {
                 </tr>
 
                 <tr>
-                    <td>12 spots left</td>
+                    <td>11 spots left</td>
                     <td>11 spot left</td>
                     <td>13 spots left</td>
                     <td>14 spots left</td>

@@ -1,12 +1,15 @@
 import { useNavigate } from 'react-router-dom';
 import styles from './Login.module.css';
+import ServerRequester from './middle/ServerRequester';
 
 const Login = () => {
   const navigate = useNavigate();
-  const loginUser = () => {
+  const loginUser = async () => {
     // your login logic here later
-    navigate("/homepage");
+    const server = new ServerRequester();
     console.log("Signing in...");
+    await server.testConnection();
+    navigate("/homepage");
   };
 
   return (
