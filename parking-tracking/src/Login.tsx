@@ -1,9 +1,21 @@
+import { useNavigate } from 'react-router-dom';
 import styles from './Login.module.css';
+import ServerRequester from './middle/ServerRequester';
 
 const Login = () => {
-  const loginUser = () => {
+  const navigate = useNavigate();
+  const loginUser = async () => {
     // your login logic here later
+    e.preventDefault();
+    var userinput = new FormData(e.target);
+    const server = new ServerRequester();
+    var username = userinput.get("username");
+    var password = userinput.get("password");
+    var userdata = await tester.testLogin(username, password);
+    
     console.log("Signing in...");
+    await server.testConnection();
+    navigate("/homepage");
   };
 
   return (
@@ -13,9 +25,9 @@ const Login = () => {
     </div>
 
     <div>
-        <label>Username: <input type="text" name='username' defaultValue="username"/></label>
+        <label>Username: <input type="text" name='username'/></label>
         <br />
-        <label>Password: <input type="text" name="password" defaultValue="password"/></label>
+        <label>Password: <input type="text" name="password"/></label>
     </div>
 
     <div className={styles.headerAuth}>

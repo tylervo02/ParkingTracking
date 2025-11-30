@@ -14,13 +14,15 @@ const dbo = new DB;    // create actual dbo from object
 // A test method to pings server
 // This will be our command interface using routers. We will instead use this to middleman the frontend to the backend.
 // Works as intended
-recordRoutes.route("/ping").get(async function (req, res)  
+recordRoutes.route("/ping").get(async function (req, response)  
 {  
-    var res = await dbo.ping();
-    if(res == true)
+    var ping_res = await dbo.ping();
+    if(ping_res == true)
         console.log("Successful Router Connection from React Server");
     else
         console.log("Failed Router Connection from React Server");
+
+    response.json("Server Successfully Pinged");
 });
 
 module.exports = recordRoutes;

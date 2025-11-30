@@ -12,7 +12,7 @@ class Database
     async ping()
     {
         console.log("Server Object Pinged!")
-        return;
+        return true;
     }
 }
 module.exports = Database;
