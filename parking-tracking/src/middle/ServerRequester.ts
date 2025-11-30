@@ -15,7 +15,17 @@ class ServerRequester    // A class in the client that handles server requests.
         {
         const message = `An error occurred: ${response.statusText}`;
         window.alert(message);
+
+        return response;
         }
+    }
+
+    async loginCheck(username, password){
+
+    }
+
+    async getParkingData() {
+        
     }
 }
 

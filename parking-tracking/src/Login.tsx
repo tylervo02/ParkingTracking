@@ -6,7 +6,13 @@ const Login = () => {
   const navigate = useNavigate();
   const loginUser = async () => {
     // your login logic here later
+    e.preventDefault();
+    var userinput = new FormData(e.target);
     const server = new ServerRequester();
+    var username = userinput.get("username");
+    var password = userinput.get("password");
+    var userdata = await tester.testLogin(username, password);
+    
     console.log("Signing in...");
     await server.testConnection();
     navigate("/homepage");
