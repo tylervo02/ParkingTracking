@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './HomePage.module.css';
 import CSUSMMap from './assets/CSUSMParkingMap.png'
 import { useNavigate } from 'react-router-dom';
@@ -7,131 +7,104 @@ import { ParkingLot } from './models/ParkingLot';
 import { ParkingLotCard } from './components/ParkingLotCard';
 
 const HomePage = () => {
-  	const navigate = useNavigate();
-    const [data, setData] = useState([]);
-    const [error, setError] = useState(null);
+  const navigate = useNavigate();
+  const [parkingLots, setParkingLots] = useState<ParkingLot[]>([]);
+  const [error, setError] = useState<string | null>(null);
+  const [lastUpdate, setLastUpdate] = useState('');
 
-    useEffect(() => {
-        const fetchParkingData = async () => {
-            try {
-                const server = new ServerRequester();
-                console.log("Signing in...");
-                const result = await server.testConnection();
+  // Initialize parking lots with observer pattern
+  useEffect(() => {
+    // Create parking lots (you can replace this with backend data later)
+    const lots = [
+      new ParkingLot('Lot A', 50),
+      new ParkingLot('Lot B', 30),
+      new ParkingLot('Lot C', 20),
+      new ParkingLot('Lot D', 40),
+      new ParkingLot('PS1', 120)
+    ];
 
-                //if API returns { data: [...] }
-                const lots = Array.isArray(result) ? result : result.data || result.lots || [];
-                setData(lots);
-            } catch (err) {
-                setError(err.message);
-                console.error("Fetch error: ", err)
-            };
-        };
+    // Register observers for real-time updates
+    lots.forEach(lot => {
+      lot.registerObserver((updatedLot) => {
+        console.log('OBSERVER: ' + updatedLot.getName() + ' updated - ' + updatedLot.getAvailableSpaces() + '/' + updatedLot.getTotalSpaces() + ' spaces');
+        setLastUpdate(new Date().toLocaleTimeString());
+        // Force re-render by updating state
+        setParkingLots(prev => [...prev]);
+      });
+    });
 
-        fetchParkingData();
-    }, []);
+    setParkingLots(lots);
+  }, []);
 
-
-  	const onRectangleClick = useCallback(() => {
-    		// Add your code here
-  	}, []);
-    
-    const renderParkingLots = () => {
-        const lotMap = {};
-        const lotDisplayOrder = [];
-        data.forEach(lot => {
-            const key = lot.name?.trim().toUpperCase().replace('LOT ', '');
-            lotDisplayOrder.push(key);
-            lotMap[key] = lot;
-        });
-
-
-        return lotDisplayOrder.flatMap(lotKey => {
-            const lot = lotMap[lotKey];
-            const occupants = lot?.occupants ?? 0;
-            const capacity = lot?.capacity ?? 0;
-            
-            const spotsText = capacity - occupants > 0
-                ? `${capacity - occupants} spots left`
-                : 'FULL';
-
-            return [
-                <>
-                <dt>{lotKey}</dt>
-                <dd>{spotsText}</dd>
-                </>
-            ];
-        });
-
-
-
-    }
-
-
-    const Logout = () => {
-        //clear cookie of the user before navigating back to the login page.
-        navigate("/");
-        console.log("Logging out");
+  // Team's backend data fetching (optional - for future integration)
+  useEffect(() => {
+    const fetchParkingData = async () => {
+      try {
+        const server = new ServerRequester();
+        console.log("Fetching parking data from backend...");
+        const result = await server.testConnection();
+        console.log("Backend data:", result);
+        // You can integrate this with your observer lots later
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Unknown error occurred');
+        console.error("Backend fetch error: ", err)
+      };
     };
-  	
-  	return (
-        <>
-        <div>
-            <h1 className={styles.csusmLogoHere}>CSUSM Parking Tracker</h1>
-        </div>
-        
-        
-        <div>
-            <img src={CSUSMMap} className={styles.csusmparkingmap1Icon} alt="CSUSM Map" />
-        </div>
 
-        <div>
-            {/* <table>
-                <tr>
-                    <th>LOT A</th>
-                    <th>LOT B</th>
-                    <th>LOT C</th>
-                    <th>LOT D</th>
-                    <th>PS1</th>
-                </tr>
+    fetchParkingData();
+  }, []);
 
-                <tr>
-                    <td>12 spots left</td>
-                    <td>11 spot left</td>
-                    <td>13 spots left</td>
-                    <td>14 spots left</td>
-                    <td>120 spots left</td>
-                </tr> */}
+  const onParkCar = (lotName: string) => {
+    const lot = parkingLots.find(l => l.getName() === lotName);
+    if (lot && lot.parkCar()) {
+      console.log('Car parked in ' + lotName);
+    } else {
+      console.log('Failed to park in ' + lotName + ' - lot full');
+    }
+  };
 
-                {/*Insert the table with the trend if we have the time to do it*/}
-            {/* </table> */}
+  const onCarLeaves = (lotName: string) => {
+    const lot = parkingLots.find(l => l.getName() === lotName);
+    if (lot && lot.carLeaves()) {
+      console.log('Car left ' + lotName);
+    }
+  };
 
-            <dl className={styles.rotatedDL}>
-                {/**do it semantically with TS once the database is set up */}
-                {/* <dt>LOT A</dt>
-                <dd>12 spots left</dd>
-                
-                <dt>LOT B</dt>
-                <dd>11 spots left</dd>
+  const Logout = () => {
+    navigate("/");
+    console.log("Logging out");
+  };
 
-                <dt>LOT C</dt>
-                <dd>13 spots left</dd>
+  return (
+    <>
+      <div>
+        <h1 className={styles.csusmLogoHere}>CSUSM Parking Tracker</h1>
+        <p>Observer Pattern Active - Real-time updates</p>
+        <p>Last update: {lastUpdate || 'No updates yet'}</p>
+        {error && <p style={{color: 'red'}}>Backend error: {error}</p>}
+      </div>
 
-                <dt>LOT D</dt>
-                <dd>14 spots left</dd>
-                
-                <dt>PS1</dt>
-                <dd>120 spots left</dd> */}
-                {error ? `Error: ${error}` : renderParkingLots()}
-            </dl>
-        </div>
-        
-        <div className={styles.button}>
-            <button className={styles.button2} type='button' onClick={Logout}>Logout</button>
-        </div>
-        </>
+      <div>
+        <img src={CSUSMMap} className={styles.csusmparkingmap1Icon} alt="CSUSM Map" />
+      </div>
 
-    );
-    		
+      {/* Interactive Parking Lots with Observer Pattern */}
+      <div className={styles.parkingLotsContainer}>
+        {parkingLots.map(lot => (
+          <ParkingLotCard
+            key={lot.getName()}
+            lot={lot}
+            onParkCar={onParkCar}
+            onCarLeaves={onCarLeaves}
+          />
+        ))}
+      </div>
+
+      <div className={styles.button}>
+        <button className={styles.button2} type='button' onClick={Logout}>Logout</button>
+      </div>
+    </>
+  );
 };
 
 export default HomePage;
