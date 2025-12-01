@@ -40,10 +40,11 @@ const HomePage = () => {
   useEffect(() => {
     const fetchParkingData = async () => {
       try {
-        const server = new ServerRequester();
-        console.log("Fetching parking data from backend...");
-        const result = await server.testConnection();
-        console.log("Backend data:", result);
+        // Calling server
+        //const server = ServerRequester.getInstance();
+        //console.log("Fetching parking data from backend...");
+        //const result = await server.ping();
+        //console.log("Backend data:", result);
         // You can integrate this with your observer lots later
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Unknown error occurred');

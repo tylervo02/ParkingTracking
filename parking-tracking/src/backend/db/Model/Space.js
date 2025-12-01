@@ -4,4 +4,4 @@ class Space
 
 }
 
-module.exports = Space;
+export default Space;

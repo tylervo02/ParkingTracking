@@ -1,11 +1,17 @@
 import { useNavigate } from 'react-router-dom';
+import ServerRequester from './middle/ServerRequester';
 
 const Login = () => {
   const navigate = useNavigate();
-
-  const loginUser = () => {
-    console.log("Login successful - going to homepage");
-    navigate("/homepage");
+  const loginUser = async() => {
+    const requester = ServerRequester.getInstance();
+    const data = await requester.login("test","test");
+    if(data != "Error")
+    {
+      console.log("Login successful - going to homepage");
+      navigate("/homepage");
+    }
+    console.log("Failed Login");
   };
 
   const signUp = () => {
@@ -42,6 +48,7 @@ const Login = () => {
           </label>
           <input 
             type="text" 
+            name="username"
             defaultValue="test" 
             style={{ 
               width: '100%', 
@@ -58,6 +65,7 @@ const Login = () => {
           </label>
           <input 
             type="password" 
+            name="password"
             defaultValue="test" 
             style={{ 
               width: '100%', 

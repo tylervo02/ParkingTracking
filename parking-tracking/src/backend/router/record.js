@@ -25,4 +25,24 @@ recordRoutes.route("/ping").get(async function (req, response)
     response.json("Server Successfully Pinged");
 });
 
+recordRoutes.route("/login/:username-:password").get(async function (req, response)   // This will be our command interface using routers. We will instead use this to middleman the frontend to the backend.
+{   
+   var un = req.params.username;
+   var pw = req.params.password;
+   console.log("Recieved Username: " + un + " and Password: " + pw);
+   try
+   {
+      var userdata = await dbo.login(un,pw);   // Login the user and get their name returned or -1 if no name
+      if(userdata)   // If valid data
+         JSON.stringify(userdata);   // Turn it into json 
+      response.json(userdata);       // Return it
+   }
+   catch(err)
+   {
+      console.log(err);
+      response.json("Error");        // Return an error instead
+   }
+
+});
+
 module.exports = recordRoutes;

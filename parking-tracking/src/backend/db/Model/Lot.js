@@ -2,4 +2,5 @@ class Lot
 {
     
 }
-module.exports = Lot;
+
+export default Lot;
