@@ -1,12 +1,20 @@
 // Database Object we will be using to hold the entire database for the server. This database will use a more grounded strcture so we can focus on design pattern implementation
 const User = require("./Model/User");
+const Lot = require("./Model/Lot");
 
 class Database
 {
     constructor()
     {
         this.users = [];
+        this.lots = [];
         this.addUser("testname", "test", "test");
+        this.addLot("Lot A", 0, 50);
+        this.addLot("Lot B", 0, 30);
+        this.addLot("Lot C", 0, 20);
+        this.addLot("Lot D", 0, 40);
+        this.addLot("PS1", 0, 120);
+        this.addLot("PS2", 0, 160);
     }
 
     // To ensure we have only 1 database we make it a singleton
@@ -41,6 +49,22 @@ class Database
                 ret = this.users[userindex].name;
         }
         return ret; // User's username if valid login, False if Invalid Login. 
+    }
+
+    async fetchLotData()
+    {
+        console.log("Returning Lot Data: " + this.lots);
+        return this.lots;
+    }
+
+    addLot(lotname, occupancy, max)
+    {
+        if (typeof lotname == 'string' && typeof occupancy == 'number' && typeof max == 'number' && occupancy <= max && occupancy >= 0) // make sure values are strings to keep database pure
+        {
+            var lot = new Lot(lotname, occupancy, max);  // Adds lot to database
+            this.lots.push(lot);
+            console.log("Added lot: ", lot);
+        }
     }
 
     addUser(name, un, pw)

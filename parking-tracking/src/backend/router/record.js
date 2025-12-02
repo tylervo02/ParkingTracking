@@ -45,4 +45,21 @@ recordRoutes.route("/login/:username-:password").get(async function (req, respon
 
 });
 
+recordRoutes.route("/fetch").get(async function (req, response)   // This will be our command interface using routers. We will instead use this to middleman the frontend to the backend.
+{   
+   try
+   {
+      lotdata = await dbo.fetchLotData();
+      console.log(lotdata);
+      if(lotdata)   // If valid data
+         JSON.stringify(lotdata);
+      response.json(lotdata);
+   }
+   catch(err)
+   {
+      response.json("Error");
+      res = false;
+   }
+});
+
 module.exports = recordRoutes;

@@ -45,6 +45,19 @@ class ServerRequester    // A class in the client that handles server requests.
         return data;
     }
 
+        async fetch()
+        {
+             var fetchstring = ServerRequester.#hostfetcher;
+        fetchstring += "/fetch/";
+        const response = await fetch(fetchstring);
+        const data = await response.json();
+        var data_str = JSON.stringify(data);
+        console.log(data);
+        console.log(data_str);
+        //window.alert("Recieved response: " + data_str + " from the Database Server.");
+        return data;
+        }
+
     instance = this;
 }
 

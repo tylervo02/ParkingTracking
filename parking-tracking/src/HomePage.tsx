@@ -15,12 +15,8 @@ const HomePage = () => {
   // Initialize parking lots with observer pattern
   useEffect(() => {
     // Create parking lots (you can replace this with backend data later)
-    const lots = [
-      new ParkingLot('Lot A', 50),
-      new ParkingLot('Lot B', 30),
-      new ParkingLot('Lot C', 20),
-      new ParkingLot('Lot D', 40),
-      new ParkingLot('PS1', 120)
+    const lots: ParkingLot[] = [
+      new ParkingLot("Lot A", 50)
     ];
 
     // Register observers for real-time updates
@@ -41,9 +37,15 @@ const HomePage = () => {
     const fetchParkingData = async () => {
       try {
         // Calling server
-        //const server = ServerRequester.getInstance();
-        //console.log("Fetching parking data from backend...");
-        //const result = await server.ping();
+        const server = ServerRequester.getInstance();
+        console.log("Fetching parking data from backend...");
+        const result = await server.fetch();
+        var lots:ParkingLot[] = [];
+        // Create lots object to call setParkingLots(lots)
+        // result[0].name  result[0].cap
+      for(var i = 0; i < result.length; i++)
+          lots.push(new ParkingLot(result[i].name, result[i].cap));
+        setParkingLots(lots);
         //console.log("Backend data:", result);
         // You can integrate this with your observer lots later
       } catch (err) {
@@ -56,8 +58,15 @@ const HomePage = () => {
   }, []);
 
   const onParkCar = (lotName: string) => {
-    const lot = parkingLots.find(l => l.getName() === lotName);
-    if (lot && lot.parkCar()) {
+    let copy = parkingLots;
+    const index = copy.findIndex(l => l.getName() === lotName);
+    if (copy[index] && copy[index].parkCar()) {
+      var arr:ParkingLot[] = [];
+      copy.forEach(copy_elem => {
+        arr.push(copy_elem);
+      });
+      setParkingLots(arr);
+      setLastUpdate(new Date().toLocaleTimeString());
       console.log('Car parked in ' + lotName);
     } else {
       console.log('Failed to park in ' + lotName + ' - lot full');
@@ -65,9 +74,18 @@ const HomePage = () => {
   };
 
   const onCarLeaves = (lotName: string) => {
-    const lot = parkingLots.find(l => l.getName() === lotName);
-    if (lot && lot.carLeaves()) {
-      console.log('Car left ' + lotName);
+    let copy = parkingLots;
+    const index = copy.findIndex(l => l.getName() === lotName);
+    if (copy[index] && copy[index].carLeaves()) {
+      var arr:ParkingLot[] = [];
+      copy.forEach(copy_elem => {
+        arr.push(copy_elem);
+      });
+      setParkingLots(arr);
+      setLastUpdate(new Date().toLocaleTimeString());
+      console.log('Car leaving ' + lotName);
+    } else {
+      console.log('Failed to leave ' + lotName + ' - lot empty');
     }
   };
 
