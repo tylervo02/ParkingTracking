@@ -13,7 +13,7 @@
   	position: absolute;
   	top: 429px;
   	left: 763px;
-  	background-color: var(--color-gainsboro);
+  	background-color: var(--color-black);
   	width: 612px;
   	height: 90px;
   	cursor: pointer;
@@ -22,7 +22,7 @@
   	position: absolute;
   	top: 675px;
   	left: 763px;
-  	background-color: var(--color-gainsboro);
+  	background-color: var(--color-black);
   	width: 612px;
   	height: 90px;
   	cursor: pointer;

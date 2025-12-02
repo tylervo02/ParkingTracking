@@ -5,13 +5,20 @@ const Login = () => {
   const navigate = useNavigate();
   const loginUser = async() => {
     const requester = ServerRequester.getInstance();
-    const data = await requester.login("test","test");
+    try{
+    var un:Element = document.querySelector('input[name="username"]');
+    var pw:Element = document.querySelector('input[name="password"]');
+    console.log(un, " ", pw);
+    const data = await requester.login(un.value,pw.value);
     if(data != "Error")
     {
       console.log("Login successful - going to homepage");
       navigate("/homepage");
     }
     console.log("Failed Login");
+    }
+    catch(err)
+    {};
   };
 
   const signUp = () => {
