@@ -8,7 +8,7 @@ class Database
     {
         this.users = [];
         this.lots = [];
-        this.addUser("testname", "test", "test");
+        this.addUser("Antonio", "Pops", "123654");
         this.addLot("Lot A", 0, 50);
         this.addLot("Lot B", 0, 30);
         this.addLot("Lot C", 0, 20);
